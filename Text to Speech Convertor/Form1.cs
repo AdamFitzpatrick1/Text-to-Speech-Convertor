@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Speech.Synthesis;
 using System.IO;
+using System.Windows.Controls.Primitives;
+
 
 namespace Text_to_Speech_Convertor
 {
@@ -16,7 +18,7 @@ namespace Text_to_Speech_Convertor
     {
         SpeechSynthesizer reader;
         private EventHandler<SpeakCompletedEventArgs> reader_SpeakCompleted;
-       
+
         public Form1()
         {
             InitializeComponent();
@@ -29,6 +31,9 @@ namespace Text_to_Speech_Convertor
             resumeButton.Enabled = false;
             stopButton.Enabled = false;
             inputBox.ScrollBars = ScrollBars.Both;
+
+
+
 
         }
 
@@ -50,7 +55,7 @@ namespace Text_to_Speech_Convertor
         private void speakButton_Click(object sender, EventArgs e)
         {
             reader.Dispose();
-            if(inputBox.Text != "")
+            if (inputBox.Text != "")
             {
                 reader = new SpeechSynthesizer();
                 reader.SpeakAsync(inputBox.Text);
@@ -58,6 +63,7 @@ namespace Text_to_Speech_Convertor
                 pauseButton.Enabled = true;
                 stopButton.Enabled = true;
                 reader.SpeakCompleted += new EventHandler<SpeakCompletedEventArgs>(Reader_SpeakCompleted);
+                rapidSpellDialog1.Check();
 
             }
             else
@@ -66,17 +72,17 @@ namespace Text_to_Speech_Convertor
 
             }
         }
-        
-            void Reader_SpeakCompleted (object sender, SpeakCompletedEventArgs e)
-            {
-                statusLabel.Text = "Idle";
-            }
+
+        void Reader_SpeakCompleted(object sender, SpeakCompletedEventArgs e)
+        {
+            statusLabel.Text = "Idle";
+        }
 
         private void pauseButton_Click(object sender, EventArgs e)
         {
-            if(reader != null)
+            if (reader != null)
             {
-                if(reader.State == SynthesizerState.Speaking)
+                if (reader.State == SynthesizerState.Speaking)
                 {
                     reader.Pause();
                     statusLabel.Text = "Paused";
@@ -89,7 +95,7 @@ namespace Text_to_Speech_Convertor
         {
             if (reader != null)
             {
-                if(reader.State == SynthesizerState.Paused)
+                if (reader.State == SynthesizerState.Paused)
                 {
                     reader.Resume();
                     statusLabel.Text = "Speaking";
@@ -100,7 +106,7 @@ namespace Text_to_Speech_Convertor
 
         private void stopButton_Click(object sender, EventArgs e)
         {
-            if(reader != null)
+            if (reader != null)
             {
                 reader.Dispose();
                 statusLabel.Text = "Idle";
@@ -120,7 +126,11 @@ namespace Text_to_Speech_Convertor
         {
             Close();
         }
+
+
     }
-    }
+}
+
+
 
 
