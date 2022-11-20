@@ -14,6 +14,9 @@ using System.Windows.Controls.Primitives;
 
 namespace Text_to_Speech_Convertor
 {
+    /// <summary>
+    /// TODO: Describe methods 
+    /// </summary>
     public partial class Form1 : Form
     {
         SpeechSynthesizer reader;
