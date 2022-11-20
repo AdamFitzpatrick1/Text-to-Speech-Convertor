@@ -43,7 +43,6 @@
             this.speakButton = new System.Windows.Forms.Button();
             this.loadButton = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.rapidSpellDialog1 = new Keyoti.RapidSpell.RapidSpellDialog(this.components);
             this.SuspendLayout();
             // 
             // openFileDialog1
@@ -166,122 +165,7 @@
             this.toolTip1.SetToolTip(this.loadButton, "This button will allow you to upload a text file into the application.");
             this.loadButton.UseVisualStyleBackColor = true;
             this.loadButton.Click += new System.EventHandler(this.loadButton_Click);
-            // 
-            // rapidSpellDialog1
-            // 
-            this.rapidSpellDialog1.AllOperationScope = Keyoti.RapidSpell.OperationScope.AllAssignedTextBoxes;
-            this.rapidSpellDialog1.AllowAnyCase = false;
-            this.rapidSpellDialog1.AllowMixedCase = false;
-            this.rapidSpellDialog1.AlwaysShowDialog = false;
-            this.rapidSpellDialog1.BackColor = System.Drawing.Color.Empty;
-            this.rapidSpellDialog1.CheckCompoundWords = false;
-            this.rapidSpellDialog1.CheckDisabledTextBoxes = false;
-            this.rapidSpellDialog1.CheckFromStartOfTextOnMultiples = true;
-            this.rapidSpellDialog1.CheckReadOnlyTextBoxes = false;
-            this.rapidSpellDialog1.ConsiderationRange = 500;
-            this.rapidSpellDialog1.ControlBox = true;
-            this.rapidSpellDialog1.DictFilePath = null;
-            this.rapidSpellDialog1.FindCapitalizedSuggestions = true;
-            this.rapidSpellDialog1.ForeColor = System.Drawing.Color.Empty;
-            this.rapidSpellDialog1.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Sizable;
-            this.rapidSpellDialog1.GUILanguage = Keyoti.RapidSpell.LanguageType.ENGLISH;
-            this.rapidSpellDialog1.Icon = null;
-            this.rapidSpellDialog1.IgnoreCapitalizedWords = false;
-            this.rapidSpellDialog1.IgnoreIncorrectSentenceCapitalization = false;
-            this.rapidSpellDialog1.IgnoreInEnglishLowerCaseI = false;
-            this.rapidSpellDialog1.IgnoreURLsAndEmailAddresses = true;
-            this.rapidSpellDialog1.IgnoreWordsWithDigits = true;
-            this.rapidSpellDialog1.IgnoreXML = false;
-            this.rapidSpellDialog1.IncludeUserDictionaryInSuggestions = false;
-            this.rapidSpellDialog1.LanguageParser = Keyoti.RapidSpell.LanguageType.ENGLISH;
-            this.rapidSpellDialog1.Location = new System.Drawing.Point(300, 200);
-            this.rapidSpellDialog1.LookIntoHyphenatedText = true;
-            this.rapidSpellDialog1.MdiParent = null;
-            this.rapidSpellDialog1.MinimizeBox = true;
-            this.rapidSpellDialog1.Modal = false;
-            this.rapidSpellDialog1.ModalAutoDispose = true;
-            this.rapidSpellDialog1.ModalOwner = null;
-            this.rapidSpellDialog1.NumberSuggestionList = false;
-            this.rapidSpellDialog1.OptionsEnabled = true;
-            this.rapidSpellDialog1.OptionsFileName = "RapidSpell_UserSettings.xml";
-            this.rapidSpellDialog1.OptionsStorageLocation = Keyoti.RapidSpell.Options.UserOptions.StorageType.IsolatedStorage;
-            this.rapidSpellDialog1.QueryTextBoxMultiline = true;
-            this.rapidSpellDialog1.SeparateHyphenWords = false;
-            this.rapidSpellDialog1.ShowContextSentence = true;
-            this.rapidSpellDialog1.ShowFinishedBoxAtEnd = true;
-            this.rapidSpellDialog1.ShowInTaskbar = false;
-            this.rapidSpellDialog1.ShowOptionForCheckAsYouType = false;
-            this.rapidSpellDialog1.ShowOptionForMultipleUserDictionaries = true;
-            this.rapidSpellDialog1.ShowOptionsButton = true;
-            this.rapidSpellDialog1.ShowUndoButton = true;
-            this.rapidSpellDialog1.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Auto;
-            this.rapidSpellDialog1.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.rapidSpellDialog1.SuggestionsMethod = Keyoti.RapidSpell.SuggestionsMethodType.HashingSuggestions;
-            this.rapidSpellDialog1.SuggestSplitWords = true;
-            this.rapidSpellDialog1.TextBoxBaseToCheck = this.inputBox;
-            this.rapidSpellDialog1.Texts.AddButtonText = "A&dd";
-            this.rapidSpellDialog1.Texts.CancelButtonText = "Canc&el";
-            this.rapidSpellDialog1.Texts.ChangeAllButtonText = "Chan&ge All";
-            this.rapidSpellDialog1.Texts.ChangeButtonText = "&Change";
-            this.rapidSpellDialog1.Texts.CheckCompletePopUpText = "The spelling check is complete.";
-            this.rapidSpellDialog1.Texts.CheckCompletePopUpTitle = "Spelling";
-            this.rapidSpellDialog1.Texts.CheckingSpellingText = "Checking Document...";
-            this.rapidSpellDialog1.Texts.DialogTitleText = "Spelling";
-            this.rapidSpellDialog1.Texts.FindingSuggestionsLabelText = "Finding Suggestions...";
-            this.rapidSpellDialog1.Texts.FindSuggestionsLabelText = "Find Suggestions?";
-            this.rapidSpellDialog1.Texts.FinishedCheckingSelectionPopUpText = "Finished checking selection, would you like to check the rest of the text?";
-            this.rapidSpellDialog1.Texts.FinishedCheckingSelectionPopUpTitle = "Finished Checking Selection";
-            this.rapidSpellDialog1.Texts.IgnoreAllButtonText = "Ignore &All";
-            this.rapidSpellDialog1.Texts.IgnoreButtonText = "&Ignore";
-            this.rapidSpellDialog1.Texts.InDictionaryLabelText = "In Dictionary:";
-            this.rapidSpellDialog1.Texts.LoadingDictionaryText = "Loading Dictionary...";
-            this.rapidSpellDialog1.Texts.NoSuggestionsText = "No Suggestions.";
-            this.rapidSpellDialog1.Texts.NotInDictionaryLabelText = "Not In Dictionary:";
-            this.rapidSpellDialog1.Texts.OptionsButtonText = "Options...";
-            this.rapidSpellDialog1.Texts.OptionsFormAdvancedSettingsText = "Advanced Settings";
-            this.rapidSpellDialog1.Texts.OptionsFormAlwaysSuggestCorrectionsText = "Always suggest corrections";
-            this.rapidSpellDialog1.Texts.OptionsFormBasicSettingsText = "Basic Settings";
-            this.rapidSpellDialog1.Texts.OptionsFormCancelText = "Cancel";
-            this.rapidSpellDialog1.Texts.OptionsFormCheckAsYouTypeText = "Check spelling as you type";
-            this.rapidSpellDialog1.Texts.OptionsFormIgnoreImproperCaseText = "Ignore improper case (eg. \"australia\", \"tABle\")";
-            this.rapidSpellDialog1.Texts.OptionsFormIgnoreInternetAddressesText = "Ignore internet addresses and emails";
-            this.rapidSpellDialog1.Texts.OptionsFormIgnoreWordsInUppercaseText = "Ignore words in UPPERCASE";
-            this.rapidSpellDialog1.Texts.OptionsFormIgnoreWordsWithNumbersText = "Ignore words with numbers";
-            this.rapidSpellDialog1.Texts.OptionsFormOKText = "OK";
-            this.rapidSpellDialog1.Texts.OptionsFormRecheckTextText = "Recheck Text";
-            this.rapidSpellDialog1.Texts.OptionsFormSuggestFromMainDictionaryOnlyText = "Suggest from main dictionary only";
-            this.rapidSpellDialog1.Texts.OptionsFormTitleText = "Spelling";
-            this.rapidSpellDialog1.Texts.OptionsFormUserDictionaryEditText = "User Dictionary...";
-            this.rapidSpellDialog1.Texts.RemoveDuplicateWordText = "Remove duplicate word";
-            this.rapidSpellDialog1.Texts.ResumeButtonText = "&Resume";
-            this.rapidSpellDialog1.Texts.SuggestionsLabelText = "Suggestions:";
-            this.rapidSpellDialog1.Texts.UndoButtonText = "Undo";
-            this.rapidSpellDialog1.Texts.UserDictionaryFormAddText = "Add";
-            this.rapidSpellDialog1.Texts.UserDictionaryFormCancelText = "Cancel";
-            this.rapidSpellDialog1.Texts.UserDictionaryFormContentsText = "User Dictionary Contents";
-            this.rapidSpellDialog1.Texts.UserDictionaryFormDeleteText = "Delete";
-            this.rapidSpellDialog1.Texts.UserDictionaryFormDictionaryLabelText = "Dictionary:";
-            this.rapidSpellDialog1.Texts.UserDictionaryFormOKText = "OK";
-            this.rapidSpellDialog1.Texts.UserDictionaryFormTitleText = "User Dictionary";
-            this.rapidSpellDialog1.Texts.UserDictionaryFormWordLabelText = "Word:";
-            this.rapidSpellDialog1.Texts.UserDictionarySelectFormAddFileText = "Add...";
-            this.rapidSpellDialog1.Texts.UserDictionarySelectFormCancelText = "Cancel";
-            this.rapidSpellDialog1.Texts.UserDictionarySelectFormChangeDefaultText = "Change Default";
-            this.rapidSpellDialog1.Texts.UserDictionarySelectFormDeleteText = "Delete";
-            this.rapidSpellDialog1.Texts.UserDictionarySelectFormDictionaryLabelText = "Dictionary:";
-            this.rapidSpellDialog1.Texts.UserDictionarySelectFormEditFileText = "Edit Word List...";
-            this.rapidSpellDialog1.Texts.UserDictionarySelectFormGroupBoxTitleText = "Dictionary List";
-            this.rapidSpellDialog1.Texts.UserDictionarySelectFormNewFileText = "New...";
-            this.rapidSpellDialog1.Texts.UserDictionarySelectFormOKText = "OK";
-            this.rapidSpellDialog1.Texts.UserDictionarySelectFormRemoveFileText = "Remove";
-            this.rapidSpellDialog1.Texts.UserDictionarySelectFormTitleText = "User Dictionary";
-            this.rapidSpellDialog1.ThirdPartyTextComponentToCheck = null;
-            this.rapidSpellDialog1.TopLevel = true;
-            this.rapidSpellDialog1.TopMost = false;
-            this.rapidSpellDialog1.UserDictionaryFile = null;
-            this.rapidSpellDialog1.V2Parser = true;
-            this.rapidSpellDialog1.WarnDuplicates = true;
-            // 
+      
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -326,7 +210,6 @@
         private System.Windows.Forms.Label synthLabel;
         private System.Windows.Forms.Label statusLabel;
         private System.Windows.Forms.ToolTip toolTip1;
-        private Keyoti.RapidSpell.RapidSpellDialog rapidSpellDialog1;
     }
 }
 

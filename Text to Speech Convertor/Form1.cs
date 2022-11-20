@@ -63,7 +63,6 @@ namespace Text_to_Speech_Convertor
                 pauseButton.Enabled = true;
                 stopButton.Enabled = true;
                 reader.SpeakCompleted += new EventHandler<SpeakCompletedEventArgs>(Reader_SpeakCompleted);
-                rapidSpellDialog1.Check();
 
             }
             else
